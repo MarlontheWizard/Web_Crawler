@@ -1,0 +1,26 @@
+#include <pthread.h>    -> Processor directive for pthreads library 
+
+pthread_t               -> Data type of a thread
+
+pthread_attr_t          -> Data type of thread attribute data 
+
+pthread_create          -> Function signature to create a thread 
+@param &(Thread Identifier)
+@param &(Thread attributes)
+@param Runner Function
+@param arv[1]
+
+pthread_join            -> Makes parent thread wait for current thread to terminate, returns 0 if successful. 
+                        -> May fail if deadlock is detected. 
+
+
+@param thread Identifier
+@param **pointer to where we want to store the value returned by the thread 
+
+
+pthread_exit            -> Call to terminate thread 
+@param value we want to return to parent thread 
+
+
+pthread_key_t           -> Data type for TLS data of respective thread. 
+
